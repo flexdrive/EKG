@@ -8,5 +8,5 @@ then
   exit 1
 fi
 
-docker build --no-cache -t bufferapp/ekg:$TAG_NAME .
-docker push bufferapp/ekg:$TAG_NAME
+docker build --no-cache -t flexdrive/ekg:$TAG_NAME .
+docker push flexdrive/ekg:$TAG_NAME

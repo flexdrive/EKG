@@ -101,6 +101,15 @@ const mongoDBCheck = ({ host, port, timeout }) =>
     timeout,
   })
 
+const postgresDBCheck = ({}) =>
+  timeoutCheck({
+    check: () =>
+      new Promise((resolve, reject) => {
+
+      }),
+    timeout
+  })
+
 module.exports = {
   timeoutCheck,
   httpGetCheck,

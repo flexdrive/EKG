@@ -1,6 +1,6 @@
 # EKG
 
-[![Build Status](https://travis-ci.org/bufferapp/EKG.svg?branch=master)](https://travis-ci.org/bufferapp/EKG)
+[![Build Status](https://travis-ci.org/flexdrive/EKG.svg?branch=master)](https://travis-ci.org/flexdrive/EKG)
 
 EKG is a library for implementing Kubernetes [liveness and readiness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) probe handlers in a sidecar or in your application.
 
@@ -29,7 +29,7 @@ spec:
         - containerPort: 3000
       # add the sidecar
       - name: healthcheck
-        image: bufferapp/ekg:0.1.2
+        image: flexdrive/ekg:0.1.2
         env:
         - name: EKG_CONFIG
           value: >
@@ -232,7 +232,7 @@ spec:
         - containerPort: 3000
       # add the sidecar
       - name: healthcheck
-        image: bufferapp/ekg:0.1.2
+        image: flexdrive/ekg:0.1.2
         env:
         # my super secret MongoDB host
         - name: MONGO_HOST
@@ -294,14 +294,14 @@ If you don't want to use a sidecar or have some custom liveness checks you'd lik
 EKG is an NPM package for Node applications. Add it as a dependency to your package.json:
 
 ```bash
-npm i -S @bufferapp/ekg
+npm i -S @flexdrive/ekg
 ```
 
 Instrument EKG into your app.
 
 ```js
 const micro = require('micro')
-const EKG = require('@bufferapp/ekg')
+const EKG = require('@flexdrive/ekg')
 
 const mainServer = micro(() => 'OK')
 mainServer.listen(3000, () => console.log('main - listening on port 3000'))
@@ -327,7 +327,7 @@ ekgServer.listen(3002, () => console.log('listening on port 3002'))
 ## API
 
 ```js
-const EKG = require('@bufferapp/ekg')
+const EKG = require('@flexdrive/ekg')
 // or with all the checks
 const {
   default: EKG,
@@ -336,7 +336,7 @@ const {
   tcpDialCheck,
   mongoDBCheck,
   timeoutCheck,
-} = require('@bufferapp/ekg')
+} = require('@flexdrive/ekg')
 // or ES6
 import EKG, {
   httpGetCheck,
@@ -344,7 +344,7 @@ import EKG, {
   tcpDialCheck,
   mongoDBCheck,
   timeoutCheck,
-} from '@bufferapp/ekg'
+} from '@flexdrive/ekg'
 ```
 
 ### EKG

@@ -27,7 +27,7 @@ const printHelp = () => {
     {
       "name": "dns-check-buffer",
       "type": "dnsResolveCheck",
-      "host": "api.bufferapp.com",
+      "host": "api.flexdrive.com",
       "timeout": 5000
     }
   ]
